@@ -1,0 +1,91 @@
+.navbar-list {
+    list-style-type: none;
+}
+
+/*----------- OPDRACHT 1 -------------*/
+
+.navbar-one .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----------- OPDRACHT 2 -------------*/
+
+.navbar-two .navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem
+}
+
+/*----------- OPDRACHT 3 -------------*/
+
+.navbar-three {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-three .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-three .navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*----------- OPDRACHT 4 -------------*/
+
+.navbar-four {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-four .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-four .navbar-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-four .navbar-list:nth-of-type(2) {
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+/*----------- OPDRACHT 5 -------------*/
+
+.navbar-five {
+    display: flex;
+}
+
+.navbar-five .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.navbar-five .navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.navbar-five .navbar-list:nth-of-type(2) {
+    justify-content: flex-end;
+    gap: 1rem;
+}
