@@ -1,0 +1,135 @@
+/*!*----------- OPDRACHT 2 START + 2e -------------*!*/
+
+body {
+    display: flex;
+    flex-direction: row;
+    /*Een vaste hoogte, omdat het scherm zich moet gedragen als "applicatie"*/
+    /*Als we zouden willen dat het scherm langer wordt wanneer er meer content bij komt (in plaats van scrollen) dan zet je hier min-height neer*/
+    height: 100vh;
+}
+
+nav {
+    flex-basis: 250px;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    /* Ruimte tussen de lijsten (verticaal want kolom) */
+    gap: 2rem;
+}
+
+.page-content {
+    overflow-y: scroll;
+    /* Altijd een basisbreedte meegeven! We kiezen hier voor 0 zodat de ruimte eerlijk wordt verdeeld
+    op basis van de grow-properties. Omdat er afbeeldingen in de card staan met een 100% width,
+    zal flexbox anders denken dat alle breedte al vergeven is als je "auto" gebruikt */
+    flex-basis: 0;
+    flex-grow: 12;
+}
+
+/*!*----------- OPDRACHT 2b -------------*!*/
+
+.navbar-logo {
+    display: flex;
+    flex-direction: row;
+    /* Centreer logo en naam in de rij */
+    align-items: center;
+    /* Ruimte tussen het logo en naam (horizontaal want rij) */
+    gap: 1rem;
+}
+
+.navbar-list {
+    /*Geef items onder elkaar weer*/
+    display: flex;
+    flex-direction: column;
+    /*Ruimte tussen de items*/
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.navbar-list:nth-of-type(1) {
+    /*De lijst met links mag ALLE resterende verticale ruimte innemen in de kolom, zodat de buttons onderaan komen te staan*/
+    flex-grow: 1;
+}
+
+.navbar-list-buttons li {
+    /*De list-items waar buttons in zitten moeten een flexbox zijn, zodat we flex-basis op de button kunnen gebruiken*/
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-link {
+    /*Alle links bevatten een icoon en tekst, dus die moeten naast elkaar*/
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.navbar-link,
+.navbar-list-buttons button {
+    /*De links en buttons mogen ALLE resterende horizontale ruimte innemen in de rij, zodat ze de volle breedte aannemen*/
+    flex-grow: 1;
+}
+
+/*!*----------- OPDRACHT 2c -------------*!*/
+
+header {
+    background-image: url("../assets/placeholder-image.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 120px 0;
+}
+
+footer {
+    background-color: #383838;
+    color: white;
+    padding: 12px 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*!*----------- OPDRACHT 2d -------------*!*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 260px;
+    flex-grow: 0;
+    gap: 0.75rem;
+    /*Dit zorgt ervoor dat cards altijd even hoog zijn, ongeacht of er eentje tussen zit met ietsje meer of minder content (te veel breekt de aspect ratio alsnog) */
+    aspect-ratio: 1 / 1.4;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.price-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-group img {
+    width: 16px;
+}
+
+/*!*----------- OPDRACHT 2e -------------*!*/
+
+main {
+    display: flex;
+    flex-direction: row;
+    /*dit is nodig om het groepje kaarten in het midden uit te lijnen*/
+    justify-content: center;
+    /*dit is nodig om cards op de volgende regel te laten komen als ze niet meer passen*/
+    flex-wrap: wrap;
+    /* Ruimte tussen de cards (horizontaal want rij) */
+    gap: 2rem;
+    padding: 40px;
+}
